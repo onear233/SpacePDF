@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\repos\\SpacePDF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FD317DB9-A4F3-4E2B-B5BA-F256019A2A22}|SpacePDF\\SpacePDF.csproj|d:\\repos\\spacepdf\\spacepdf\\models\\documentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD317DB9-A4F3-4E2B-B5BA-F256019A2A22}|SpacePDF\\SpacePDF.csproj|solutionrelative:spacepdf\\models\\documentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD317DB9-A4F3-4E2B-B5BA-F256019A2A22}|SpacePDF\\SpacePDF.csproj|d:\\repos\\spacepdf\\spacepdf\\services\\pdfrenderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD317DB9-A4F3-4E2B-B5BA-F256019A2A22}|SpacePDF\\SpacePDF.csproj|solutionrelative:spacepdf\\services\\pdfrenderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD317DB9-A4F3-4E2B-B5BA-F256019A2A22}|SpacePDF\\SpacePDF.csproj|d:\\repos\\spacepdf\\spacepdf\\services\\pdfexportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD317DB9-A4F3-4E2B-B5BA-F256019A2A22}|SpacePDF\\SpacePDF.csproj|solutionrelative:spacepdf\\services\\pdfexportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD317DB9-A4F3-4E2B-B5BA-F256019A2A22}|SpacePDF\\SpacePDF.csproj|d:\\repos\\spacepdf\\spacepdf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FD317DB9-A4F3-4E2B-B5BA-F256019A2A22}|SpacePDF\\SpacePDF.csproj|solutionrelative:spacepdf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PdfExportService.cs",
+              "DocumentMoniker": "D:\\repos\\SpacePDF\\SpacePDF\\Services\\PdfExportService.cs",
+              "RelativeDocumentMoniker": "SpacePDF\\Services\\PdfExportService.cs",
+              "ToolTip": "D:\\repos\\SpacePDF\\SpacePDF\\Services\\PdfExportService.cs",
+              "RelativeToolTip": "SpacePDF\\Services\\PdfExportService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T08:21:35.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DocumentManager.cs",
+              "DocumentMoniker": "D:\\repos\\SpacePDF\\SpacePDF\\Models\\DocumentManager.cs",
+              "RelativeDocumentMoniker": "SpacePDF\\Models\\DocumentManager.cs",
+              "ToolTip": "D:\\repos\\SpacePDF\\SpacePDF\\Models\\DocumentManager.cs",
+              "RelativeToolTip": "SpacePDF\\Models\\DocumentManager.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T08:21:31.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\repos\\SpacePDF\\SpacePDF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "SpacePDF\\MainWindow.xaml",
+              "ToolTip": "D:\\repos\\SpacePDF\\SpacePDF\\MainWindow.xaml",
+              "RelativeToolTip": "SpacePDF\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-08-02T08:21:05.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PdfRenderService.cs",
+              "DocumentMoniker": "D:\\repos\\SpacePDF\\SpacePDF\\Services\\PdfRenderService.cs",
+              "RelativeDocumentMoniker": "SpacePDF\\Services\\PdfRenderService.cs",
+              "ToolTip": "D:\\repos\\SpacePDF\\SpacePDF\\Services\\PdfRenderService.cs",
+              "RelativeToolTip": "SpacePDF\\Services\\PdfRenderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T08:21:03.165Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
