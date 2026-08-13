@@ -149,22 +149,33 @@ public partial class PreviewWindow : Window
 
         double localMinY = Math.Min(clampedStart, clampedEnd);
         double localMaxY = Math.Max(clampedStart, clampedEnd);
-        double blankHeightPx = localMaxY - localMinY;
+        double rangeHeightPx = localMaxY - localMinY;
 
         const double minBlankPx = 5.0;
-        if (blankHeightPx < minBlankPx)
+        if (rangeHeightPx < minBlankPx)
             return;
 
-        double globalYPt = localMinY / _docManager.RenderDpi * 72.0;
-        double blankHeightPt = blankHeightPx / _docManager.RenderDpi * 72.0;
+        double startPt = localMinY / _docManager.RenderDpi * 72.0;
+        double endPt = localMaxY / _docManager.RenderDpi * 72.0;
 
-        _docManager.InsertBlank(globalYPt, blankHeightPt);
-        _versionNumber++;
+        if (clampedEnd > clampedStart)
+        {
+            // Drag downward — insert blank space
+            _docManager.InsertBlank(startPt, endPt - startPt);
+            _versionNumber++;
+            StatusText.Text = $"Inserted blank ({endPt - startPt:F1} pt) — {_docManager.Pages.Count} page(s)";
+        }
+        else
+        {
+            // Drag upward — delete content in range
+            _docManager.DeleteRange(startPt, endPt);
+            _versionNumber++;
+            StatusText.Text = $"Deleted ({endPt - startPt:F1} pt) — {_docManager.Pages.Count} page(s)";
+        }
 
         _docManager.ReflowAndBuildDisplay();
         RefreshBothPanels();
 
-        StatusText.Text = $"Inserted blank space ({blankHeightPt:F1} pt) — {_docManager.Pages.Count} page(s)";
         VersionText.Text = $"v{_versionNumber}";
 
         Dispatcher.BeginInvoke(UpdateContentGridSize, DispatcherPriority.Loaded);
