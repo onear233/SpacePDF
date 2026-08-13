@@ -39,21 +39,7 @@ public partial class MainWindow : Window
 
     private int _cumulativeVersion;
 
-    private void OpenPreviewButton_Click(object sender, RoutedEventArgs e)
-    {
-        if (string.IsNullOrEmpty(_selectedFilePath) || !IsValidPdf(_selectedFilePath))
-            return;
-
-        var previewWindow = new PreviewWindow(_selectedFilePath);
-        previewWindow.Owner = this;
-        previewWindow.ShowDialog();
-
-        if (previewWindow.Version > 0)
-        {
-            _cumulativeVersion += previewWindow.Version;
-            VersionLabel.Text = $"Total blanks inserted: {_cumulativeVersion}";
-        }
-    }
+  
 
     private static bool IsValidPdf(string path)
     {
