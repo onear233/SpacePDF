@@ -36,7 +36,6 @@ public partial class MainWindow : Window
             OpenPreviewButton.IsEnabled = true;
     }
 
-    private int _cumulativeVersion;
 
   
     private static bool IsValidPdf(string path)
@@ -56,7 +55,8 @@ public partial class MainWindow : Window
     }
 
     private void OpenPreviewButton_Click(object sender, RoutedEventArgs e)
-    {
-
+    {   
+        if(_selectedFilePath == null) return;
+        new PreviewWindow(_selectedFilePath).Show();
     }
 }
