@@ -66,13 +66,9 @@
                     Margin="0,0,0,0"
                     BorderThickness="0"
                     Content="预览"
+                    Click="OpenPreviewButton_Click"
                     FontSize="13"
                     IsEnabled="False">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="8" />
-                        </Style>
-                    </Button.Resources>
                 </Button>
                 <TextBlock
                     x:Name="FilePathText"

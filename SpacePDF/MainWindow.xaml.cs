@@ -31,16 +31,14 @@ public partial class MainWindow : Window
                 "Invalid PDF", MessageBoxButton.OK, MessageBoxImage.Warning);
             return;
         }
-
-        _selectedFilePath = dialog.FileName;
-        FilePathText.Text = dialog.FileName;
-        OpenPreviewButton.IsEnabled = true;
+            _selectedFilePath = dialog.FileName;
+            FilePathText.Text = dialog.FileName;
+            OpenPreviewButton.IsEnabled = true;
     }
 
     private int _cumulativeVersion;
 
   
-
     private static bool IsValidPdf(string path)
     {
         try
@@ -49,12 +47,16 @@ public partial class MainWindow : Window
             var header = new byte[5];
             if (stream.Read(header, 0, 5) < 5)
                 return false;
-            return header[0] == '%' && header[1] == 'P' && header[2] == 'D'
-                && header[3] == 'F' && header[4] == '-';
+            return header.AsSpan().SequenceEqual("%PDF-"u8);
         }
         catch
         {
             return false;
         }
+    }
+
+    private void OpenPreviewButton_Click(object sender, RoutedEventArgs e)
+    {
+
     }
 }
