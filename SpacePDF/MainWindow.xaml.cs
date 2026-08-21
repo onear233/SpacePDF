@@ -57,6 +57,7 @@ public partial class MainWindow : Window
     private void OpenPreviewButton_Click(object sender, RoutedEventArgs e)
     {   
         if(_selectedFilePath == null) return;
-        new PreviewWindow(_selectedFilePath).Show();
+        if(DPI_TextBox.Value == null) return;
+        new PreviewWindow(_selectedFilePath,(int)DPI_TextBox.Value).Show();
     }
 }

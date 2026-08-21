@@ -9,6 +9,7 @@
 
 
     <Grid>
+        <ProgressBar x:Name="ProgressBar" Margin="5" IsIndeterminate="True" VerticalAlignment="Top"/>
         <ScrollViewer x:Name="MainScrollViewer">
             <StackPanel x:Name="PagesContainer" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <StackPanel.LayoutTransform>
@@ -18,5 +19,6 @@
                 <!-- 动态添加的页面 Image 将放置在这里 -->
             </StackPanel>
         </ScrollViewer>
+        
     </Grid>
 </Window>

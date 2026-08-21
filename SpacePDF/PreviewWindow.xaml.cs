@@ -13,14 +13,14 @@ namespace SpacePDF;
 public partial class PreviewWindow : Window
 {
     private string pdfPath;
-    public PreviewWindow(string pdfFilePath)
+    public PreviewWindow(string pdfFilePath,int DPI)
     {
         InitializeComponent();
         pdfPath = pdfFilePath;
-        LoadPdfPreview(pdfPath);
+        LoadPdfPreview(pdfPath, DPI);
     }
 
-    private async Task LoadPdfPreview(string pdfPath)
+    private async Task LoadPdfPreview(string pdfPath,int DPI)
     {
         await Task.Run(() =>
         {
@@ -28,7 +28,7 @@ public partial class PreviewWindow : Window
             int pageCount = document.PageCount;
             for (int pageIndex = 0; pageIndex < pageCount; pageIndex++) 
             {
-                var bitMapSource = PdfRenderHelper.RenderPageToBitmap(pdfPath, pageIndex);
+                var bitMapSource = PdfRenderHelper.RenderPageToBitmap(pdfPath, pageIndex,DPI);
                 //在UI上添加控件
                 Dispatcher.Invoke(new Action(() => 
                 {
@@ -41,7 +41,12 @@ public partial class PreviewWindow : Window
                     imageControl.Width = 800;
                     PagesContainer.Children.Add(imageControl);
                 }));
+                
             }
+            Dispatcher.Invoke(new Action(() => 
+            {
+                ProgressBar.IsIndeterminate = false;
+            }));
         });
     }
 }

@@ -11,7 +11,7 @@ namespace SpacePDF.Tools
     /// </summary>
     class PdfRenderHelper
     {
-       public static BitmapSource RenderPageToBitmap(string pdfPath, int pageIndex,int dpi = 300)
+       public static BitmapSource RenderPageToBitmap(string pdfPath, int pageIndex,int dpi = 100)
         {
             //自动释放的document对象
             using var document = PdfDocument.Load(pdfPath);

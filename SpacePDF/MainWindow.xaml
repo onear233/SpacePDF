@@ -16,7 +16,7 @@
 
         <Border
             Width="440"
-            Height="220"
+            Height="280"
             Background="White"
             BorderBrush="#E0E0E0"
             BorderThickness="1"
@@ -51,14 +51,12 @@
                     Click="SelectPdfButton_Click"
                     Content="打开PDF文件"
                     FontSize="14" />
-                <TextBlock
-                    x:Name="VersionLabel"
-                    Margin="0,0,0,0"
-                    HorizontalAlignment="Center"
-                    FontSize="12"
-                    Foreground="#64748B"
-                    Text="" />
+                
 
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="DPI:" VerticalAlignment="Center" Margin="10" FontSize="14" />
+                    <ui:NumberBox x:Name="DPI_TextBox" Margin="5" Width="150" Maximum="300" Minimum="5" Value="100" SmallChange="20" />
+                </StackPanel>   
                 <Button
                     x:Name="OpenPreviewButton"
                     Width="200"
